@@ -21,8 +21,8 @@ alert(data.errorMsg);
 var tokenRequest = function() {
 // Setup token request arguments
 var args = {
-sellerId: "102626791",
-publishableKey: "E0F6517A-CFCF-11E3-8295-A7DD28100996",
+sellerId: "901376229",
+publishableKey: "69FA28BB-01E2-4768-B783-01278A7276CA",
 ccNo: $("#card-number").val(),
 cvv: $("#card-cvc").val(),
 expMonth: $("#card-expiry-month").val(),
@@ -33,7 +33,7 @@ TCO.requestToken(successCallback, errorCallback, args);
 };
 $(function() {
 // Pull in the public encryption key for our environment
-TCO.loadPubKey('production');
+TCO.loadPubKey('sandbox');
 $("#payment-form").submit(function(e) {
 // Call our token request function
 tokenRequest();

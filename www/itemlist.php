@@ -1,5 +1,5 @@
 <?php
-include 'menu.php';
+include 'topmenu.php';
 $connect = mysqli_connect("localhost", "root", "", "shopping") or die("Please, check your server connection.");
 $category=$_REQUEST['category'];
 $query = "SELECT item_code, item_name, description, imagename, price FROM products " ."where category like '$category' order by item_code";

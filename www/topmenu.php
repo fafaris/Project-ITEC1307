@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-<title>Bintu Online Bazar</title>
+<title>Shop Online</title>
 <link rel="stylesheet" href="css/style.css">
 <script language="JavaScript" type="text/JavaScript">
 function makeRequestObject(){
@@ -34,12 +34,12 @@ xmlhttp.send(null);
 }
 </script>
 </head>
-<body>
+<body bgcolor = "#87CEFA">
 <table width="100%" cellspacing="0" cellpadding="2">
 <col style="width:30%">
 <col style="width:40%">
 <col style="width:20%">
-<tr><td style="background-color:cyan;color:Blue;"></td><td style="background-color:cyan;color:Blue;"></td><td style="background-color:cyan;color:Blue;">
+<tr><td style="background-color:#BFEFFF;color:Blue;"></td><td style="background-color:#BFEFFF;color:Blue;"></td><td style="background-color:#BFEFFF;color:Blue;">
 <?php
 if (session_status() == PHP_SESSION_NONE) {
 session_start();
@@ -55,14 +55,14 @@ echo "<a href=\"signin.php\">Login</a>&nbsp;&nbsp;&nbsp;";
 echo "<a href=\"validatesignup.php\">Signup</a></td></tr>";
 }
 ?>
-<tr><td style="font-size: 35px;color:blue;background-color:cyan;">
-<b>Bintu Online Bazar</b></font></td>
-<td bgcolor="cyan">
+<tr><td style="font-size: 35px;color:#F0FFFF;background-color:#1E90FF;">
+<b>Shop Online</b></font></td>
+<td bgcolor="#1E90FF">
 <form method="post" action="searchitems.php">
 <input size="50" type="text" name="tosearch">
-<input type="submit" name="submit" value="Search">
+<button type="submit" name="button" id="button" style="background: #00CED1"><img src="images/search-icon.png" width="16" height="16" align="absmiddle" /> search</button>
 </form></td>
-<td bgcolor="cyan" ><a href="cart.php"><img style="max-width:40px;max-height:40px;width:auto;height:auto;" src="images/cart.png"></img>
+<td bgcolor="#1E90FF" ><a href="cart.php"><img style="max-width:40px;max-height:40px;width:auto;height:auto;" src="images/cart1.png"></img>
 <span id="cartcountinfo"></span></a>
 </td></tr>
 </table>
@@ -75,8 +75,8 @@ echo "<a href=\"validatesignup.php\">Signup</a></td></tr>";
 <ul>
 <li><a href="itemlist.php?category=CellPhone">Smart Phones</a></li>
 <li><a href="itemlist.php?category=Laptop">Laptops</a></li>
-<li><a href="index.php">Cameras </a></li>
-<li><a href="index.php">Televisions</a></li>
+<li><a href="itemlist.php?category=Camera">Cameras </a></li>
+<li><a href="itemlist.php?category=Tv">Televisions</a></li>
 </ul>
 </li>
 <li class="dropdown">

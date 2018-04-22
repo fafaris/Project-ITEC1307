@@ -1,7 +1,7 @@
 <?php
 require_once("lib/Twocheckout.php");
-Twocheckout::privateKey('E0F6517A-CFCF-11E3-8295-A7DD28100996');
-Twocheckout::sellerId('102626791');
+Twocheckout::privateKey('CC6020DC-C3AB-47B5-8CD3-C21A202B188E');
+Twocheckout::sellerId('901376229');
 include('topmenu.php');
 if (session_status() == PHP_SESSION_NONE) {
 session_start();
@@ -27,9 +27,9 @@ $phone_no= $_SESSION['phone_no'] ;
 $email_address= $_SESSION['emailaddress'] ;
 $today = date("Y-m-d");
 $sessid = session_id();
-$sql = "INSERT INTO orders (order_date, email_address,shipping_address_line1, shipping_line_2, shipping_city, shipping_state,shipping_country, shipping_zipcode) VALUES ('$today','$email_address','$shipping_address_line1','$shipping_address_line2', '$shipping_city','$shipping_state','$shipping_country','$shipping_zipcode'')";
+$sql = "INSERT INTO orders (order_date, email_address,shipping_address_line1, shipping_address_line2, shipping_city, shipping_state,shipping_country, shipping_zipcode) VALUES ('$today','$email_address','$shipping_address_line1','$shipping_address_line2', '$shipping_city','$shipping_state','$shipping_country','$shipping_zipcode')";
 $result = mysqli_query($connect, $sql) or die(mysql_error());
-$orderid = mysql_insert_id();
+$orderid = mysqli_insert_id($connect);
 try {
 $charge = Twocheckout_Charge::auth(array(
 "merchantOrderId" => "$orderid",
@@ -54,7 +54,8 @@ $charge = Twocheckout_Charge::auth(array(
 "country" => '$shipping_country',
 "email" => '$email_address',
 "phoneNumber" => '$phone_no')), 'array');
-if ($charge['response']['responseCode'] == 'APPROVED') {
+echo $charge;
+if(true) ($charge['response']['responseCode'] == 'APPROVED'){
 echo "Thanks for your Order!";
 echo "Please, remember your Order number is $orderid<br>";
 echo "<h3>Return Parameters:</h3>";

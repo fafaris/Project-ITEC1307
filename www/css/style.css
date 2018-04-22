@@ -31,7 +31,7 @@ font-weight: bold;
 color: white;
 text-decoration: none;
 border-radius: 3px 3px 0 0;
-background-color: blue;
+background-color: #4169E1;
 }
 .nav > li > a:hover {
 text-decoration: none;
@@ -57,7 +57,7 @@ left: -1px;
 z-index: 20000;
 min-width: 160px;
 padding: 0 0 5px;
-background: blue;
+background: #4169E1;
 border: 1px solid #dadada;
 border-top: 0;
 border-radius: 0 0 3px 3px;

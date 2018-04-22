@@ -1,4 +1,5 @@
 <?php
+    include('topmenu.php');
     $connect = mysqli_connect("localhost", "root", "", "shopping") or die ("Please, check the server connection.");
     $email_address = $_POST['emailaddress'];
     $password = $_POST['password'];

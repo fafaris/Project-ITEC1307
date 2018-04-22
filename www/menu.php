@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-<title>Bintu Online Bazar</title>
+<title>Shop Online</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
 <ul>
 <li><a href="itemlist.php?category=CellPhone">Smart Phones</a></li>
 <li><a href="itemlist.php?category=Laptop">Laptops</a></li>
-<li><a href="index.php">Cameras </a></li>
+<li><a href="itemlist.php?category=Camera">Cameras </a></li>
 <li><a href="index.php">Televisions</a></li>
 </ul>
 </li>
