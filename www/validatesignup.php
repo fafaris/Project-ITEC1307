@@ -5,6 +5,11 @@ include('topmenu.php');
 <head>
 <script language="JavaScript" type="text/JavaScript" src="checkform.js">
 </script>
+<style>
+    body {
+        background-color: #87CEFA;
+    }
+</style>
 </head>
     <body bgcolor = "#87CEFA">
     <form action="addcustomer.php" method="post" onsubmit="return validate(this);">

@@ -3,6 +3,11 @@ include('topmenu.php');
 ?>
 <html>
 <head>
+<style>
+    body {
+        background-color: #87CEFA;
+    }
+</style>
 </head>
 <body>
 <form action="validateuser.php" method="post">

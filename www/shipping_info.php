@@ -24,6 +24,13 @@ $results = mysqli_query($connect, $query) or die(mysql_error());
 $row = mysqli_fetch_array($results, MYSQLI_ASSOC);
 extract($row);
 ?>
+<html>
+<head>
+<style>
+    body {
+        background-color: #87CEFA;
+    }
+</style>
 <form action="test2checkout.php" method="post">
 <table border="0" cellspacing="1" cellpadding="3">
 <tr><td colspan="2" align="center">Your information available with us:</td></tr>
@@ -50,5 +57,5 @@ extract($row);
 <?php
 }
 ?>
-</body>
+</head>
 </html>

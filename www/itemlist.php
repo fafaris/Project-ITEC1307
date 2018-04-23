@@ -1,32 +1,39 @@
+
 <?php
-include 'topmenu.php';
-$connect = mysqli_connect("localhost", "root", "", "shopping") or die("Please, check your server connection.");
+include('topmenu.php');
+echo"<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Bootstrap 101 Template</title>
+  <link href='css/bootstrap.min.css' rel='stylesheet'>
+  <style>
+    body {
+        background-color: #87CEFA;
+    }
+    </style>
+</head>
+<body>
+  <div class='row'>";
+$connect = mysqli_connect("localhost", "root", "", "shopping") or
+die("Please, check your server connection.");
 $category=$_REQUEST['category'];
-$query = "SELECT item_code, item_name, description, imagename, price FROM products " ."where category like '$category' order by item_code";
+$query = "SELECT item_code, item_name, description, imagename, price FROM
+products " .
+"where category like '$category' order by item_code";
 $results = mysqli_query($connect, $query) or die(mysql_error());
-echo "<table border=\"0\">";
-$x=1;
-echo "<tr>";
 while ($row = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
-if ($x <= 3) // #1
-{
-$x = $x + 1;
 extract($row);
-echo "<td style=\"padding-right:15px;\">";
-echo "<a href=itemdetails.php?itemcode=$item_code>"; // #2
-echo '<img src=' . $imagename . ' style="max-width:220px;max-height:240px;width:auto;height:auto;"></img><br/>';
+echo"<div class='col-xs-6 col-md-3'>";
+echo "<a href=itemdetails.php?itemcode=$item_code  class='thumbnail'>"; // #2
+echo '<img src=' . $imagename . ' style="max-width:230px;max-height:180px;
+width:auto;height:auto;"></img>';
 echo $item_name .'<br/>';
-echo "</a>";
 echo '$'.$price .'<br/>';
-echo "</td>";
+echo "</a>";
+echo "</div>";
 }
-else
-{
-$x=1;
-echo "</tr><tr>";
-}
-}
-echo "</table>";
 ?>
-</body>
+</div>
 </html>

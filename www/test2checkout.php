@@ -20,6 +20,12 @@ if ((isset($_SESSION['password']) && $_SESSION['emailaddress'] != "") || (isset(
     $count = 0;
 ?>
 <html>
+    <head>
+    <style>
+    body {
+        background-color: #87CEFA;
+    }
+    </style>
     <body>
         <form action='https://sandbox.2checkout.com/checkout/purchase' method='post'>
             <input type='hidden' name='sid' value='901376229' />
@@ -47,4 +53,5 @@ if ((isset($_SESSION['password']) && $_SESSION['emailaddress'] != "") || (isset(
             <input name='submit' type='submit' value='Checkout' style="background: #00CED1"/>
         </form>
     </body>
+    </head>
 </html>

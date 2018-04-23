@@ -1,6 +1,13 @@
 <?php
 include('topmenu.php');
 ?>
+<html>
+<head>
+<style>
+    body {
+        background-color: #87CEFA;
+    }
+</style>
 <span id="crossfade">
 <a href="itemlist.php?category=CellPhone">
 <img class="bottom" src="images/AppleiPhone4s.png" style="max-width:350px;max-height:350px;width:auto; height:auto;" />
@@ -21,5 +28,5 @@ include('topmenu.php');
 <img class="bottom" src="images/OLED65E8PUA.png" style="max-width:350px;max-height:350px;width:auto;height: auto;" />
 <img class="top" src="images/Samsung.png" style="max-width:350px;max-height:350px;width:auto;height: auto;" /></a>
 </span>
-</body>
+</head>
 </html>

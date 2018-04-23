@@ -1,5 +1,13 @@
+<?php include('topmenu.php'); ?>
+<html>
+<head>
+<style>
+    body {
+        background-color: #87CEFA;
+    }
+</style>
 <?php
-include('topmenu.php');
+
 if (session_status() == PHP_SESSION_NONE) {
 session_start();
 }
@@ -97,3 +105,5 @@ include("showcart.php");
 echo "<SCRIPT LANGUAGE=\"JavaScript\">updateCart();</SCRIPT>";
 }
 ?>
+</head>
+</html>

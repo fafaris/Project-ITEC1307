@@ -38,14 +38,14 @@ else
 <html>
 <head>
 </head>
-<body>
+<body bgcolor = "#87CEFA">
 <h3>Not Logged in yet</h1>
 <p>
 You are currently not logged into our system.<br>
 You can do purchasing only if you are logged in.<br>
 If you have already registered,
 <a href="signin.php">click here</a> to login, or if would like to create an
-account, <a href="create_account.php">click here</a> to register.
+account, <a href="validatesignup.php">click here</a> to register.
 </p>
 </body>
 </html>
